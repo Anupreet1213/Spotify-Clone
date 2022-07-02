@@ -1,0 +1,83 @@
+body{
+  background-color: #F7E2D6;
+  position: relative;
+}
+#navbar{
+  background-color:black;
+}
+.logo{
+  width:40px;
+  margin-left: 20px;
+  margin-right: 5px;
+}
+.Middle{
+  background-color: black;
+  width:70%;
+  height:auto;
+  margin:40px auto 0 auto;
+  min-height: 75vh;
+  border-radius: 15px;
+  padding: 10px;
+}
+.songList{
+  width: 80%;
+  height: 40px;
+}
+h2{
+  margin: 20px 0 0 20px;
+  color:white;
+}
+.heading{
+  text-align: center;
+  margin-top: auto;
+}
+.songItem{
+  height: 50px;
+  display: flex;
+  background-color: white;
+  width: 80%;
+  margin: 18px 0;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 34px;
+  padding: 20px;
+}
+.songItem img{
+  width: 50px;
+  margin: 0 23px;
+  border-radius: 25px;
+}
+.bottom{
+  position: sticky;
+  height: 100px;
+  background-color: black;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+}
+#toggleBar{
+  width: 80vw;
+  text-align: center;
+  cursor: pointer;
+}
+.icons{
+  margin-bottom: 15px;
+}
+.icons i{
+  cursor: pointer;
+}
+.Middle .songItem{
+  cursor: pointer;
+}
+.btmSongName{
+  position: absolute;
+  left: 10vw;
+  top: 20px;
+}
+.btmSongName img{
+  opacity: 0;
+  transition: opacity 0.4s ease-in;
+}
