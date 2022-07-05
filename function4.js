@@ -4,6 +4,7 @@ var allSongs = {
   music: ["Shape Of You - Ed Sheeran", "Levitating - Dua Lipa", "Faded - Alan Walker", "Believer - Imagine Dragons", "Enemy - Imagine Dragons"]
 }
 let audio = new Audio("Songs3/1.mp3");
+let index = 0;
 
 $("#mainButt").click(function(){
   if(audio.paused || audio.currentTime<=0){
@@ -23,6 +24,19 @@ $("#mainButt").click(function(){
 audio.addEventListener("timeupdate", ()=>{
   progress = parseInt((audio.currentTime/audio.duration)*100);
   toggleBar.value = progress;
+  if(toggleBar.value==100){
+    if(index>=5){
+      index = 1;
+    }
+    else{
+      index += 1;
+    }
+    audio.src = ("Songs3/"+(index)+".mp3");
+    audio.play();
+    document.getElementById("sideName").innerText = allSongs.music[index-1];
+    animate = ("#" + index);
+    $(animate).fadeIn(100).fadeOut(100).fadeIn(100);
+  }
 });
 
 toggleBar.addEventListener("click",()=>{
