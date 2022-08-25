@@ -1,4 +1,3 @@
-let songIndex = 0;
 let toggleBar = document.getElementById("toggleBar");
 var allSongs = {
   music: ["Tum Se Hi - Mohit Chauhan", "Kaise Hua - Vishal Mishra", "Tera Ban Jaunga", "Ajab Si - KK", "Tera Hone - Atif Aslam"]
