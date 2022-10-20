@@ -1,3 +1,7 @@
+body::-webkit-scrollbar {
+  display: none;
+}
+
 body{
   background-color: #F7E2D6;
   position: relative;
@@ -11,7 +15,9 @@ body{
   margin-right: 5px;
 }
 .Middle{
-  background-color: black;
+  
+background: rgb(2,0,36);
+background: linear-gradient(131deg, rgba(2,0,36,1) 0%, rgba(127,29,179,1) 92%);
   width:70%;
   height:auto;
   margin:40px auto 0 auto;
@@ -36,8 +42,8 @@ h2{
   height: 50px;
   display: flex;
   background-color: white;
-  width: 80%;
-  margin: 18px 0;
+  width: 100%;
+  margin: 28px 0;
   justify-content: space-between;
   align-items: center;
   border-radius: 34px;
@@ -81,4 +87,19 @@ h2{
 .btmSongName img{
   opacity: 0;
   transition: opacity 0.4s ease-in;
+}
+@media only screen and (max-width:900px) {
+  /* For mobile phones: */
+  .Middle{
+    height: 20px;
+  }
+
+}
+
+.songLogo{
+  border: 2px solid purple;
+}
+
+.songName{
+  font-weight: bold;
 }
