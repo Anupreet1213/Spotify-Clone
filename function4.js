@@ -90,3 +90,4 @@ $("#prev").click(()=>{
   $(animate).fadeIn(100).fadeOut(100).fadeIn(100);
   document.getElementById("sideName").innerText = allSongs.music[index-1];
 });
+
