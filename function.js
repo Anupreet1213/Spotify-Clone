@@ -38,14 +38,14 @@ audio.addEventListener("timeupdate", ()=>{
     $(animate).fadeIn(100).fadeOut(100).fadeIn(100);
   }
 });
-
 toggleBar.addEventListener("click",()=>{
   audio.currentTime = toggleBar.value * audio.duration/100;
 });
-
 Array.from(document.getElementsByClassName("songItem")).forEach((element)=>{
   element.addEventListener("click", (e)=>{
+    console.log(e.target.id);
     index = parseInt(e.target.id);
+    console.log(index);
     audio.src = ("Songs/"+(index)+".mp3");
     document.getElementById("sideName").innerText = allSongs.music[index-1];
     audio.currentTime = 0;
@@ -90,3 +90,4 @@ $("#prev").click(()=>{
   $(animate).fadeIn(100).fadeOut(100).fadeIn(100);
   document.getElementById("sideName").innerText = allSongs.music[index-1];
 });
+
